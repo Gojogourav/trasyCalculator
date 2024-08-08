@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js" defer></script>
+</head>
+<body class="bg-[#e6e7eb] text-sm" id="card">
+
+    <div class="grid justify-center flex-row mt-40 min-h-[480px]">
+        <div id="calcpage" class="bg-[#ffffff] w-[280px] rounded-xl">
+            <nav class="flex justify-between">
+                <div id="time" class="mx-[10px]"></div>
+                <ul class="flex justify-between">
+                    <li class="" id="signal"><img src="./pngtree-signal-icon-image_1344478-removebg-preview.png" class="w-6" alt=""></li>
+                    <li id="wifi" ><img src="./wi-fi-icon-wifi-signal-icon-wireless-internet-connection-signal-illustration-isolated-on-white-background-vector-removebg-preview.png" class="w-7" alt=""></li>
+                    <li id="battery" class="mr-[10px]"><img src="./664883-removebg-preview.png" class="w-6" alt=""></li>
+                </ul>
+            </nav>
+            <!-- nav bar ends here -->
+            
+            <div id="equation" class="mx-[10px] flex justify-end mt-7 text-lg text-slate-600">This is equation</div>
+            <div id="solution" class="mx-[10px] flex justify-end  text-2xl font-bold">This is solution</div>
+            <!-- solution ends here -->
+            
+            <div id="buttons" class="grid-flow-row justify-between mx-6">
+                <ul class="flex justify-between pt-14 pb-2 font-semibold">
+                    <li id="C"><button class="bg-[#fcf4c6] text-[#c78f47] hover:bg-[#fff09b] w-12 h-12 rounded-2xl">C</button></li>
+                    <li id="("><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">(</button></li>
+                    <li id=")"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">)</button></li>
+                    <li id="/"><button class="bg-[#f49e0b] hover:bg-[#cc7e11] text-white w-12 h-12 rounded-2xl">/</button></li>
+                </ul>
+                <ul class="flex justify-between pb-2 font-semibold">
+                    <li id="7"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">7</button></li>
+                    <li id="8"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">8</button></li>
+                    <li id="9"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6]  w-12 h-12 rounded-2xl">9</button></li>
+                    <li id="x"><button class="bg-[#f49e0b] hover:bg-[#cc7e11] text-white w-12 h-12 rounded-2xl">x</button></li>
+                </ul>
+                <ul class="flex justify-between pb-2 font-semibold">
+                    <li id="4"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">4</button></li>
+                    <li id="5"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">5</button></li>
+                    <li id="6"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">6</button></li>
+                    <li id="-"><button class="bg-[#f49e0b] hover:bg-[#cc7e11] text-white w-12 h-12 rounded-2xl">-</button></li>
+                </ul>
+                <ul class="flex justify-between pb-2 font-semibold">
+                    <li id="1"><button class="bg-[#e6e7eb]  hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">1</button></li>
+                    <li id="2"><button class="bg-[#e6e7eb]  hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">2</button></li>
+                    <li id="3"><button class="bg-[#e6e7eb]  hover:bg-[#a6a6a6]  w-12 h-12 rounded-2xl">3</button></li>
+                    <li id="+"><button class="bg-[#f49e0b]  hover:bg-[#cc7e11] text-white w-12 h-12 rounded-2xl">+</button></li>
+                </ul>
+                <ul class="flex justify-evenly pb-2 font-semibold grid grid-cols-4 gap-2">
+                    <li id="0" class="col-span-2"><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-full h-12 rounded-2xl col-span-2">0</button></li>
+                    <li id="."><button class="bg-[#e6e7eb] hover:bg-[#a6a6a6] w-12 h-12 rounded-2xl">.</button></li>
+                    <li id="="><button class="bg-[#0eb982] hover:bg-[#0c8d64] text-white w-12 h-12 rounded-2xl">=</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
