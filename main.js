@@ -48,39 +48,46 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     //equation
-    let textEquation ='';
-    const updateEquation = (value)=>{
-        textEquation+=value
-        equation.textContent = textEquation
-    }
-    document.querySelectorAll('button').forEach(button=>{
-        button.addEventListener('click',()=>{
-            let value = button.textContent
-            if(value == 'x'){
-                value = '*'
-            }
+    let textEquation =[];
 
-            if(value=='C'){
-                if(textEquation.length==1){
-                    textEquation = ""
-                }else{
-                    textEquation = textEquation.slice(0,-1);
-                }
-                equation.textContent = textEquation
+    function stringChange(){
+        if(equation.textContent==""){
+            equation.textContent = "             "
+            solution.textContent = "             "
+        }
+    }
+    const updateEquation = (value)=>{
+        textEquation.push(value)
+        equation.textContent = textEquation.join('')
+    }
+    let status = 0;
+    document.querySelectorAll('#numbers').forEach(button=>{
+        button.addEventListener('click',()=>{
+            updateEquation(button.textContent);
+            status=1
+        })
+    })
+    document.querySelectorAll('#operand').forEach(button=>{
+        button.addEventListener('click',()=>{
+            updateEquation(button.textContent);
+            status = 2
+        })
+    })
+    document.querySelectorAll('#special').forEach(button=>{
+        button.addEventListener('click',()=>{
+            if(button.textContent=="C"){
                 solution.textContent = ""
-            }
-            else if(value=='='){
-                try{
-                    equation.textContent = textEquation
-                    const result = eval(textEquation)
-                    solution.textContent = result
-                } catch(error){
-                    solution.textContent = "Error"
-                    equation.textContent = result
-                }
+                stringChange()
+                textEquation.pop()
+                equation.textContent =textEquation.join('')
             }else{
-                updateEquation(value)
+                try{
+                    solution.textContent=eval(equation.textContent)
+                }catch(error){
+                    solution.textContent = "error"
+                }
             }
         })
     })
+
 })
