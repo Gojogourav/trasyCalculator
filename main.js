@@ -60,17 +60,16 @@ document.addEventListener('DOMContentLoaded',()=>{
         textEquation.push(value)
         equation.textContent = textEquation.join('')
     }
-    let status = 0;
     document.querySelectorAll('#numbers').forEach(button=>{
         button.addEventListener('click',()=>{
             updateEquation(button.textContent);
-            status=1
+
         })
     })
     document.querySelectorAll('#operand').forEach(button=>{
         button.addEventListener('click',()=>{
             updateEquation(button.textContent);
-            status = 2
+
         })
     })
     document.querySelectorAll('#special').forEach(button=>{
@@ -89,5 +88,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
         })
     })
+
+    function 
 
 })
