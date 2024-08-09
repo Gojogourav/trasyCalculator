@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     function stringChange(){
         if(equation.textContent==""){
-            equation.textContent = "             "
-            solution.textContent = "             "
+            equation.textContent = "           "
+            solution.textContent = "           "
         }
     }
     const updateEquation = (value)=>{
@@ -68,20 +68,26 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
     document.querySelectorAll('#operand').forEach(button=>{
         button.addEventListener('click',()=>{
-            updateEquation(button.textContent);
+            if(button.textContent == "x"){
+                updateEquation('*')
+            }else if(button.textContent == '/'){
+                updateEquation('/')
+            }else{
+                updateEquation(button.textContent);
+            }
 
         })
     })
     document.querySelectorAll('#special').forEach(button=>{
         button.addEventListener('click',()=>{
             if(button.textContent=="C"){
-                solution.textContent = ""
+                solution.textContent = "           "
                 stringChange()
                 textEquation.pop()
                 equation.textContent =textEquation.join('')
             }else{
                 try{
-                    solution.textContent=eval(equation.textContent)
+                    solution.textContent=parseFloat(eval(equation.textContent)).toFixed(2)
                 }catch(error){
                     solution.textContent = "error"
                 }
@@ -89,6 +95,5 @@ document.addEventListener('DOMContentLoaded',()=>{
         })
     })
 
-    function 
 
 })
