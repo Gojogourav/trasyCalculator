@@ -29,24 +29,22 @@ document.addEventListener('DOMContentLoaded',()=>{
     
     
     const time = document.querySelector('#time');
-    const d = new Date();
-    
-    let hour = d.getHours();
-    if (hour > 12) {
-        hour -= 12;
-    } else if (hour === 0) {
-        hour = 12;
+    const timeString = ()=>{
+        let d = new Date();
+        let hour = d.getHours();
+        if (hour > 12) {
+            hour -= 12;
+        } else if (hour === 0) {
+            hour = 12;
+        }
+        
+        const minutes = d.getMinutes();
+        const formatMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        const ampm = d.getHours() >= 12 ? 'PM' : 'AM';
+        
+        const timeText = `${hour}:${formatMinutes} ${ampm}`;
+        time.textContent = timeText;
     }
-    
-    const minutes = d.getMinutes();
-    const formatMinutes = minutes < 10 ? `0${minutes}` : minutes;
-    const ampm = d.getHours() >= 12 ? 'PM' : 'AM';
-    
-    const timeText = `${hour}:${formatMinutes} ${ampm}`;
-    time.textContent = timeText;
-    console.log("dom fully loaded");
-
-
     //equation
     let textEquation =[];
 
