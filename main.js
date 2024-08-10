@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded',()=>{
         const timeText = `${hour}:${formatMinutes} ${ampm}`;
         time.textContent = timeText;
     }
+    timeString();
+    setInterval(timeString,1000)
+    
+    
     //equation
     let textEquation =[];
 
