@@ -1,25 +1,5 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-    const c = document.querySelector('#\\C')
-    const bleft = document.querySelector('#\\(')
-    const bright = document.querySelector('#\\)')
-    const slash = document.querySelector('#\\/')
-    const seven = document.querySelector('#\\7')
-    const eight = document.querySelector('#\\8')
-    const nine = document.querySelector('#\\9')
-    const prod = document.querySelector('#\\x')
-    const four = document.querySelector('#\\4')
-    const five = document.querySelector('#\\5')
-    const six = document.querySelector('#\\6')
-    const minus = document.querySelector('#\\-')
-    const one = document.querySelector('#\\1')
-    const two = document.querySelector('#\\2')
-    const three = document.querySelector('#\\3')
-    const divide = document.querySelector('#\\+')
-    const zero = document.querySelector('#\\0')
-    const dot = document.querySelector('#\\.')
-    const equal = document.querySelector('#\\=')
-    
     const equation = document.querySelector('#equation')
     const solution = document.querySelector('#solution')
     
